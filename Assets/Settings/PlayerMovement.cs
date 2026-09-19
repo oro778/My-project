@@ -3,10 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //player Movement
     public Rigidbody2D player;
     public float playerSpeed = 5f;
     public float horizontalMovement;
     public float verticalMovement;
+
+    //player color changing
+    public GameObject plr;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,5 +28,10 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMovement = context.ReadValue<Vector2>().x;
         verticalMovement = context.ReadValue<Vector2>().y;
+    }
+
+    public void ColorChanger(GameObject plr)
+    {
+        
     }
 }
